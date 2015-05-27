@@ -23,7 +23,7 @@ module IpAsInt::Ip2int
     rexp = /^\d+$/
     raise(ArgumentError, "Invalid IP: illegal format") unless ip_a.all? { |x| rexp.match(x) }
     ip_a = ip_a.map(&:to_i)
-    raise(ArgumentError, "Invalid IP: integer out of range") unless ip_a.all? { |x| (0..255).include? x
+    raise(ArgumentError, "Invalid IP: integer out of range") unless ip_a.all? { |x| (0..255).include? x }
     ip_a
   end
 
