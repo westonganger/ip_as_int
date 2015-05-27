@@ -15,12 +15,16 @@ module IpAsInt::Ip2int
   end
 
   def ip2a(ip_string)
-    ip_a = ip_string.split('.')
-    raise(ArgumentError, "Invalid IP: need 4 parts") unless ip_a.length == 4
-    rexp = /^\d+$/
-    raise(ArgumentError, "Invalid IP: illegal format") unless ip_a.all? { |x| rexp.match(x) }
-    ip_a = ip_a.map(&:to_i)
-    raise(ArgumentError, "Invalid IP: integer out of range") unless ip_a.all? { |x| (0..255).include? x }
+    if ip_string.is_a(Integer)
+      ip_a = ip_string
+    else
+      ip_a = ip_string.split('.')
+      raise(ArgumentError, "Invalid IP: need 4 parts") unless ip_a.length == 4
+      rexp = /^\d+$/
+      raise(ArgumentError, "Invalid IP: illegal format") unless ip_a.all? { |x| rexp.match(x) }
+      ip_a = ip_a.map(&:to_i)
+      raise(ArgumentError, "Invalid IP: integer out of range") unless ip_a.all? { |x| (0..255).include? x 
+    end
     ip_a
   end
 
