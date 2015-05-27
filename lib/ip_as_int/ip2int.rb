@@ -16,7 +16,7 @@ module IpAsInt::Ip2int
 
   def ip2a(ip_string)
     if ip_string.is_a(Integer)
-      return ip_string
+      return int2ip(ip_string)
     end
     ip_a = ip_string.split('.')
     raise(ArgumentError, "Invalid IP: need 4 parts") unless ip_a.length == 4
