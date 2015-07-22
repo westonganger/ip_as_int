@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "ip_as_int"
   gem.require_paths = ["lib"]
-  gem.version       = IpAsInt::VERSION
+  gem.version       = VERSION
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rake'
