@@ -1,4 +1,4 @@
-require File.expand_path(__FILE__)
+require File.expand_path('../lib',__FILE__)
 require 'lib/ip_as_int/version'
 
 Gem::Specification.new do |gem|
