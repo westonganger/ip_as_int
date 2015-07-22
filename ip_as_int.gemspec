@@ -1,5 +1,4 @@
-require File.expand_path('../lib',__FILE__)
-require 'lib/ip_as_int/version'
+require File.expand_path('../lib/ip_as_int/version',__FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["zelig"]
@@ -13,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "ip_as_int"
   gem.require_paths = ["lib"]
-  gem.version       = IpAsInt::VERSION
+  gem.version       = IpAsInt::VERSION.dup
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rake'
