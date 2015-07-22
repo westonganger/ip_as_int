@@ -1,4 +1,5 @@
-require File.expand_path('../lib/ip_as_int/version',__FILE__)
+$:.push File.expand_path("../lib", __FILE__)
+require "devise/version"
 
 Gem::Specification.new do |gem|
   gem.authors       = ["zelig"]
