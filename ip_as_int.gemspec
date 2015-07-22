@@ -1,3 +1,5 @@
+require File.expand_path('../lib/ip_as_int/version', __FILE__)
+
 Gem::Specification.new do |gem|
   gem.authors       = ["zelig"]
   gem.email         = ["viktor.tron@gmail.com"]
