@@ -1,13 +1,8 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path('../lib/ip_as_int/version', __FILE__)
-
-DESC = %q{IP address - integer conversion and activerecord support for ip attribute as integer column}
-
 Gem::Specification.new do |gem|
   gem.authors       = ["zelig"]
   gem.email         = ["viktor.tron@gmail.com"]
-  gem.description   = DESC
-  gem.summary       = DESC
+  gem.description   = "IP address - integer conversion and activerecord support for ip attribute as integer column"
+  gem.summary       = gem.description
   gem.homepage      = "https://github.com/zelig/ip_as_int"
 
   gem.files         = `git ls-files`.split($\)
